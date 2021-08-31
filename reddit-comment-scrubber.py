@@ -39,7 +39,7 @@ def main():
         parser.print_help()
         exit()
 
-    cutoff = datetime.datetime.strptime("2020-01-01", '%Y-%m-%d')
+    cutoff = datetime.datetime.strptime(args.date, '%Y-%m-%d')
 
     print('Script started in ' + str(args.mode) + ' mode.')
     print('Cutoff date is: ' + str(cutoff))
