@@ -46,7 +46,7 @@ To enable this script to access your comments:
      python reddit-comment-scrubber.py -m delete -d 2020-01-01
      ```
      
-   **Note:** For stability, the script only processes the most recent 2000 comments in your account. You can modify this limit on line 14, but the script has not been tested with higher numbers.
+   **Note:** For stability, the script only processes the top 2000 comments in your account. You can modify this limit on line 14, but the script has not been tested with higher numbers.
 
 As the script runs, it outputs the progress as each comment is processed. The console output might look like this example:
 ```shell
