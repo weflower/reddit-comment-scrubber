@@ -72,9 +72,9 @@ def main():
 class User:
     def __init__(self, userName):
         if (len(subList) > 0):
-            comment_list = [x for x in reddit.redditor(userName).comments.new(limit=commentLimit) if str(x.subreddit).lower() in subList]
+            comment_list = [x for x in reddit.redditor(userName).comments.top(limit=commentLimit) if str(x.subreddit).lower() in subList]
         else:
-            comment_list = [x for x in reddit.redditor(userName).comments.new(limit=commentLimit)]
+            comment_list = [x for x in reddit.redditor(userName).comments.top(limit=commentLimit)]
             
         self.name = userName
         
