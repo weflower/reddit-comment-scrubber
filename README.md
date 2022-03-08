@@ -34,7 +34,14 @@ To enable this script to access your comments:
       ```    
       Otherwise, leave the array empty.
 
-5. Open a command prompt where the reddit-comment-scrubber.py is located, and run it with one of these commands:
+5. Open a command prompt where the reddit-comment-scrubber.py is located, and run it with these parameters:
+
+   | Name        | Description      |
+   |-------------|------------------|
+   | -m          | The operation mode. The value can be `scrub` or `delete`. |
+   | -d          | The ending/cutoff date. The script processes any comments that were made before 12:00 AM on this date.<br/>The format for this value is `YYYY-MM-dd`. |
+ 
+   For example:
    * To replace comments' text with generic text:
      ```shell
       python reddit-comment-scrubber.py -m scrub -d 2020-01-01
@@ -46,7 +53,7 @@ To enable this script to access your comments:
      python reddit-comment-scrubber.py -m delete -d 2020-01-01
      ```
      
-   **Note:** For stability, the script only processes the top 2000 comments in your account. You can modify this limit on line 14, but the script has not been tested with higher numbers.
+   **Note:** For stability, the script only processes the top 2000 comments in your account. You can modify this limit on line 14, but the script has not been tested with higher numbers. So if you want to process all of your comments, you would run the script multiple times until there are no comments to process.
 
 As the script runs, it outputs the progress as each comment is processed. The console output might look like this example:
 ```shell
